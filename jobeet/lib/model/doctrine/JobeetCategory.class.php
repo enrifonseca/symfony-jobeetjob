@@ -22,10 +22,10 @@ class JobeetCategory extends BaseJobeetCategory
   		return Doctrine_Core::getTable('JobeetJob')->getActivesJobs($query);
 	}
 
-	//	Retorna el nombre para mostrar en URL
-	public function getSlug(){
+	//	Retorna el nombre para mostrar en URL (no se utiliza xq se modifico el schema para slug)
+	/*public function getSlug(){
 		return Jobeet::slugify($this->getName());
-	}
+	}*/
 
 	//	Retorna la cantidad de Jobs actives de la categoria
 	public function countActiveJobs(){

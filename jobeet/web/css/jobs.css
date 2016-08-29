@@ -18,13 +18,17 @@
  margin: 0 auto;
 }
 
-.jobs tr.even
+/*  Correccion de estilos para evitar un condicional en cada ciclo */
+/*.jobs tr.even
 {
   background-color: #f3fafc;
 }
 
 .jobs tr.odd
 {
+}*/
+.jobs tr:nth-child(2n+1){
+  background-color: #f3fafc;
 }
 
 .jobs tr:hover
