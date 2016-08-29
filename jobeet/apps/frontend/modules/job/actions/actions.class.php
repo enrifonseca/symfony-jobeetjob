@@ -12,15 +12,24 @@ class jobActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->jobeet_jobs = Doctrine_Core::getTable('JobeetJob')
+    $this->jobs = Doctrine_Core::getTable('JobeetJob')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->jobeet_job = Doctrine_Core::getTable('JobeetJob')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->jobeet_job);
+    //  Modificando para obtener con getRoute()
+    /*
+    * El metodo getroute() automaticamente lanza la excepcion para el 404
+    * Para generar una URL desde un action utilizar:
+      $this->redirect($this->generateUrl('job_show_user', $job));
+    */
+    
+    /*$this->job = Doctrine_Core::getTable('JobeetJob')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->job);*/
+
+    $this->job = $this->getRoute()->getObject();
   }
 
   public function executeNew(sfWebRequest $request)

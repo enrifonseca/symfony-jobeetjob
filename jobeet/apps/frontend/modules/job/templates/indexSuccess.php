@@ -1,50 +1,72 @@
+<?php use_stylesheet('jobs.css') ?>
+
+<?php
+slot(
+  'title',
+  'Jobeet Test - Enri'
+)
+?>
+
 <h1>Jobeet jobs List</h1>
 
-<table>
+<table class="list">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Category</th>
-      <th>Type</th>
-      <th>Company</th>
-      <th>Logo</th>
-      <th>Url</th>
       <th>Position</th>
+      <th>Company</th>
       <th>Location</th>
-      <th>Description</th>
-      <th>How to apply</th>
-      <th>Token</th>
-      <th>Is public</th>
-      <th>Is activated</th>
-      <th>Email</th>
-      <th>Expires at</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Go!</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($jobeet_jobs as $jobeet_job): ?>
+    <?php foreach ($jobs as $job): ?>
     <tr>
-      <td><a href="<?php echo url_for('job/show?id='.$jobeet_job->getId()) ?>"><?php echo $jobeet_job->getId() ?></a></td>
-      <td><?php echo $jobeet_job->getCategoryId() ?></td>
-      <td><?php echo $jobeet_job->getType() ?></td>
-      <td><?php echo $jobeet_job->getCompany() ?></td>
-      <td><?php echo $jobeet_job->getLogo() ?></td>
-      <td><?php echo $jobeet_job->getUrl() ?></td>
-      <td><?php echo $jobeet_job->getPosition() ?></td>
-      <td><?php echo $jobeet_job->getLocation() ?></td>
-      <td><?php echo $jobeet_job->getDescription() ?></td>
-      <td><?php echo $jobeet_job->getHowToApply() ?></td>
-      <td><?php echo $jobeet_job->getToken() ?></td>
-      <td><?php echo $jobeet_job->getIsPublic() ?></td>
-      <td><?php echo $jobeet_job->getIsActivated() ?></td>
-      <td><?php echo $jobeet_job->getEmail() ?></td>
-      <td><?php echo $jobeet_job->getExpiresAt() ?></td>
-      <td><?php echo $jobeet_job->getCreatedAt() ?></td>
-      <td><?php echo $jobeet_job->getUpdatedAt() ?></td>
+      <td><?php echo $job->getPosition() ?></td>
+      <td><?php echo $job->getCompany() ?></td>
+      <td>
+        <?php echo $job->getLocation() ?>
+      </td>
+      <td>
+        <!--<a href="<?php echo url_for(
+          'job/show?id='.$job->getId().
+          '&company=' .$job->getCompany().
+          '&location=' .$job->getLocation().
+          '&position=' .$job->getPosition()
+        ) ?>">
+          Ejemplo de link #1
+        </a>-->
+
+        <!--<a href="<?php echo url_for(array(
+          'module'    =>  'job',
+          'action'    =>  'show',
+          'id'        =>  $job->getId(),
+          'company'   =>  $job->getCompany(),
+          'location'  =>  $job->getLocation(),
+          'position'  =>  $job->getPosition()
+        )) ?>">
+          Ejemplo de link #2
+        </a>-->
+
+        <!--<a href="<?php echo url_for(array(
+          'sf_route'    =>  'job_show_user',
+          'sf_subject'  =>  $job
+        )) ?>">
+          Ejemplo de link #3
+        </a>-->
+
+        <!--<a href="<?php echo url_for('job_show_user', $job) ?>">
+          Go this job!
+        </a>-->
+
+        <!-- otro ejemplo -->
+        <!-- pasando como 4 parametro true genera la url absoluta -->
+        <?php echo link_to('Go this job!', 'job_show_user', $job) ?>
+      </td>
     </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('job/new') ?>">New</a>
+<!--<a class="btn pull-right" href="<?php echo url_for('job/new') ?>">
+  New
+</a>-->
