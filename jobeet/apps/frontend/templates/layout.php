@@ -12,7 +12,7 @@
         <div id="header">
             <div class="content">
                 <h1><a href="<?php echo url_for('@homepage') ?>">
-                    <img src="/legacy/images/logo.jpg" alt="Jobeet Job Board" />
+                    <img src="/images/logo.jpg" alt="Jobeet Job Board" />
                 </a></h1>
 
                 <div id="sub_header">
@@ -59,9 +59,9 @@
         <div id="footer">
             <div class="content">
                 <span class="symfony">
-                    <img src="/legacy/images/jobeet-mini.png" />
+                    <img src="/images/jobeet-mini.png" />
                     powered by <a href="/">
-                    <img src="/legacy/images/symfony.gif" alt="symfony framework" />
+                    <img src="/images/symfony.gif" alt="symfony framework" />
                 </a>
             </span>
             <ul>
