@@ -14,12 +14,15 @@ class JobeetCategory extends BaseJobeetCategory
 {
 	//	Retorna una lista de Jobs pertenecientes a una dicha (this) categoria
     public function getActiveJobs($max = 10){
-  		$query = Doctrine_Query::create()
+  		/*$query = Doctrine_Query::create()
     	->from('JobeetJob j')
     	->where('j.category_id = ?', $this->getId())
     	->limit($max);
  
-  		return Doctrine_Core::getTable('JobeetJob')->getActivesJobs($query);
+  		return Doctrine_Core::getTable('JobeetJob')->getActivesJobs($query);*/
+  		return $this->getActiveJobsQuery()
+  			->limit($max)
+  			->execute();
 	}
 
 	//	Retorna el nombre para mostrar en URL (no se utiliza xq se modifico el schema para slug)
@@ -29,10 +32,19 @@ class JobeetCategory extends BaseJobeetCategory
 
 	//	Retorna la cantidad de Jobs actives de la categoria
 	public function countActiveJobs(){
+		/*$query = Doctrine_Query::create()
+			->from('JobeetJob j')
+			->where('j.category_id = ?', $this->getId());
+
+		return Doctrine_Core::getTable('JobeetJob')->countActiveJobs($query);*/
+		return $this->getActiveJobsQuery()->count();
+	}
+
+	public function getActiveJobsQuery(){
 		$query = Doctrine_Query::create()
 			->from('JobeetJob j')
 			->where('j.category_id = ?', $this->getId());
 
-		return Doctrine_Core::getTable('JobeetJob')->countActiveJobs($query);
+		return Doctrine_Core::getTable('JobeetJob')->addActiveJobsQuery($query);
 	}
 }

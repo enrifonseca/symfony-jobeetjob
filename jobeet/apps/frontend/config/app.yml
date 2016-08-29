@@ -6,6 +6,7 @@
 all:
   active_days: 30
   max_jobs_on_homepage: 10
+  max_jobs_on_category: 20
 
 # Este archivo se utiliza para la configuracion especifica de una app
 # En este caso declaro un parametro
