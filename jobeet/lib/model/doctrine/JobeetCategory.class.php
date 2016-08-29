@@ -21,4 +21,18 @@ class JobeetCategory extends BaseJobeetCategory
  
   		return Doctrine_Core::getTable('JobeetJob')->getActivesJobs($query);
 	}
+
+	//	Retorna el nombre para mostrar en URL
+	public function getSlug(){
+		return Jobeet::slugify($this->getName());
+	}
+
+	//	Retorna la cantidad de Jobs actives de la categoria
+	public function countActiveJobs(){
+		$query = Doctrine_Query::create()
+			->from('JobeetJob j')
+			->where('j.category_id = ?', $this->getId());
+
+		return Doctrine_Core::getTable('JobeetJob')->countActiveJobs($query);
+	}
 }

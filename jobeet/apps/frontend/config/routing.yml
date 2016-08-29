@@ -11,13 +11,19 @@ job_show_user:
   url:      /job/:company_slug/:location_slug/:id/:position_slug
   class:    sfDoctrineRoute
   options:
-    model: JobeetJob
-    type: object
-    method_for_query: retrieveActiveJob
+    model:              JobeetJob
+    type:               object
+    method_for_query:   retrieveActiveJob
   param:    { module: job, action: show }
   requeriments:
     id:         \d+
     sf_method:  [get]
+
+category:
+  url:      /category/:slug
+  class:    sfDoctrineRoute
+  options: { model: JobeetCategory, type: object }
+  param:  { module: category, action: show}
 
 # default rules
 homepage:
