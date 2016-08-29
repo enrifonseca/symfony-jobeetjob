@@ -25,4 +25,12 @@ class JobeetJobTable extends Doctrine_Table
             ->addOrderBy('j.expires_at DESC')
             ->execute();
     }
+
+    public function retrieveActiveJob(Doctrine_Query $query = null){
+        $query = is_null($query) ? Doctrine_Query::create()->from('JobeetJob j') : $query;
+
+        return $query->andWhere('a.expires_at > ?', date('Y-m-d h:i:s', time()))
+            ->fetchOne();
+
+    }
 }
