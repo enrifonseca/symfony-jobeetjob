@@ -3,3 +3,13 @@
 
 # default values
 #all:
+all:
+  active_days: 30
+
+# Este archivo se utiliza para la configuracion especifica de una app
+# En este caso declaro un parametro
+# Para llamarlo se utiliza: sfConfig()
+# 
+# 
+# 
+# 

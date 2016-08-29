@@ -12,6 +12,7 @@
  */
 class JobeetJob extends BaseJobeetJob
 {
+	//	Reescribiendo el metodo toString
 	public function __toString(){
 		return sprintf('%s at %s (%s)', $this->getPosition(), $this->getCompany(), $this->getLocation());
 	}
@@ -34,4 +35,19 @@ class JobeetJob extends BaseJobeetJob
 	}
 
 	//	Fin funciones URLs Firendly
+
+	//	Reescribiendo metodo save()
+	public function save(Doctrine_Connection $conn = null){
+		
+		//	Al poblar la DB comentar el if, despues descomentarlo
+		if($this->idNew() && !$this->getExpiresAt()){
+			$now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
+			//$this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * 30));
+
+			//	Trabajando con parametros de la app
+			$this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * sfConfig::get('app_active_days')));
+		}
+
+		return parent::save($conn);
+	}
 }
