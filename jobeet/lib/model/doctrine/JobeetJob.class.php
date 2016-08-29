@@ -18,18 +18,18 @@ class JobeetJob extends BaseJobeetJob
 	}
 
 	//	Funciones para hacer URLs Friendly
-	/*
-	*	Reemplaza caracteres no ASCCI por - (guion medio)
-	*/
 
+	//	Retorna la prop company reemplazando caract no ASCCI por - (guion medio)
 	public function getCompanySlug(){
 		return Jobeet::slugify($this->getCompany());
 	}
 
+	//	Retorna la prop position reemplazando caract no ASCCI por - (guion medio)
 	public function getPositionSlug(){
 		return Jobeet::slugify($this->getPosition());
 	}
 
+	//	Retorna la prop location reemplazando caract no ASCCI por - (guion medio)
 	public function getLocationSlug(){
 		return Jobeet::slugify($this->getLocation());
 	}
@@ -40,7 +40,8 @@ class JobeetJob extends BaseJobeetJob
 	public function save(Doctrine_Connection $conn = null){
 		
 		//	Al poblar la DB comentar el if, despues descomentarlo
-		if($this->idNew() && !$this->getExpiresAt()){
+		//	Si no valido que idNew exista genera un error al poblar la DB
+		if(isset($this->idNew) && $this->idNew() && !$this->getExpiresAt()){
 			$now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
 			//$this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * 30));
 

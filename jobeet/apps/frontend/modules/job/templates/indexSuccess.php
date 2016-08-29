@@ -9,63 +9,35 @@ slot(
 
 <h1>Jobeet jobs List</h1>
 
-<table class="list">
-  <thead>
-    <tr>
-      <th>Position</th>
-      <th>Company</th>
-      <th>Location</th>
-      <th>Go!</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($jobs as $job): ?>
-    <tr>
-      <td><?php echo $job->getPosition() ?></td>
-      <td><?php echo $job->getCompany() ?></td>
-      <td>
-        <?php echo $job->getLocation() ?>
-      </td>
-      <td>
-        <!--<a href="<?php echo url_for(
-          'job/show?id='.$job->getId().
-          '&company=' .$job->getCompany().
-          '&location=' .$job->getLocation().
-          '&position=' .$job->getPosition()
-        ) ?>">
-          Ejemplo de link #1
-        </a>-->
+<div id="jobs">
+  <?php foreach ($categories as $category): ?>
+    <div class="category <?php echo Jobeet::slugify($category->getname()) ?>">
+      <div class="category">
+        <div class="feed">
+          <a href="">Feed</a>
+        </div>
+        <h1><?php echo $category ?></h1>
+      </div>
+      
+      <table class="jobs">
+        <?php foreach ($category->getActiveJobs(sfConfig::get('app_max_jobs_on_homepage')) as $i => $job): ?>
+          <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
+            <td class="location">
+              <?php echo $job->getLocation() ?>
+            </td>
+            <td class="position">
+              <?php echo link_to($job->getPosition(), 'job_show_user', $job) ?>
+            </td>
+            <td class="company">
+              <?php echo $job->getCompany() ?>
+            </td>
+          </tr>
+        <?php endforeach; ?>
+      </table>
 
-        <!--<a href="<?php echo url_for(array(
-          'module'    =>  'job',
-          'action'    =>  'show',
-          'id'        =>  $job->getId(),
-          'company'   =>  $job->getCompany(),
-          'location'  =>  $job->getLocation(),
-          'position'  =>  $job->getPosition()
-        )) ?>">
-          Ejemplo de link #2
-        </a>-->
-
-        <!--<a href="<?php echo url_for(array(
-          'sf_route'    =>  'job_show_user',
-          'sf_subject'  =>  $job
-        )) ?>">
-          Ejemplo de link #3
-        </a>-->
-
-        <!--<a href="<?php echo url_for('job_show_user', $job) ?>">
-          Go this job!
-        </a>-->
-
-        <!-- otro ejemplo -->
-        <!-- pasando como 4 parametro true genera la url absoluta -->
-        <?php echo link_to('Go this job!', 'job_show_user', $job) ?>
-      </td>
-    </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
+    </div>
+  <?php endforeach; ?>
+</div>
 
 <!--<a class="btn pull-right" href="<?php echo url_for('job/new') ?>">
   New

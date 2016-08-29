@@ -12,4 +12,13 @@
  */
 class JobeetCategory extends BaseJobeetCategory
 {
+	//	Retorna una lista de Jobs pertenecientes a una dicha (this) categoria
+    public function getActiveJobs($max = 10){
+  		$query = Doctrine_Query::create()
+    	->from('JobeetJob j')
+    	->where('j.category_id = ?', $this->getId())
+    	->limit($max);
+ 
+  		return Doctrine_Core::getTable('JobeetJob')->getActivesJobs($query);
+	}
 }

@@ -16,4 +16,12 @@ class JobeetCategoryTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('JobeetCategory');
     }
+
+    //	Retorna una lista de categorias con al menos un Job
+    public function getWithJobs(){
+    	return $this->createQuery('c')
+    		->leftJoin('c.JobeetJobs j')
+    		->where('j.expires_at > ?', date('Y-m-d h:i:s', time()))
+    		->execute();
+    }
 }
