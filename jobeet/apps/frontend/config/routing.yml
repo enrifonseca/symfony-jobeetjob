@@ -4,38 +4,40 @@
 # proyect rules
 
 job:
-  class:    sfDoctrineRouteCollection
-  options:  { model: JobeetJob }
+  class:              sfDoctrineRouteCollection
+  options:
+    model:            JobeetJob
+    column:           token
+  requeriments:
+      token: \w+
 
 job_show_user:
-  url:      /job/:company_slug/:location_slug/:id/:position_slug
-  class:    sfDoctrineRoute
+  url:                /job/:company_slug/:location_slug/:id/:position_slug
+  class:              sfDoctrineRoute
   options:
-    model:              JobeetJob
-    type:               object
-    method_for_query:   retrieveActiveJob
-  param:    { module: job, action: show }
+    model:            JobeetJob
+    type:             object
+    method_for_query: retrieveActiveJob
+  param:
+    module:           job
+    action:           show
   requeriments:
-    id:         \d+
-    sf_method:  [get]
+    id:               \d+
+    sf_method:        [get]
 
 category:
-  url:      /category/:slug
-  class:    sfDoctrineRoute
-  options: { model: JobeetCategory, type: object }
-  param:  { module: category, action: show}
+  url:                /category/:slug
+  class:              sfDoctrineRoute
+  options:
+    model:            JobeetCategory
+    type:             object
+  param:
+    module:           category
+    action:           show
 
 # default rules
 homepage:
   url:   /
-  param: { module: job, action: index }
-
-# generic rules
-
-# please, remove them by adding more specific rules
-# default_index:
-#   url:   /:module
-#   param: { action: index }
-
-# default:
-#   url:   /:module/:action/*
+  param:
+    module:           job
+    action:           index

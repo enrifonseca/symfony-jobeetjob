@@ -38,14 +38,17 @@ class JobeetJob extends BaseJobeetJob
 
 	//	Reescribiendo metodo save()
 	public function save(Doctrine_Connection $conn = null){
-		
-		//	Al poblar la DB comentar el if, despues descomentarlo
-		//	Si no valido que idNew exista genera un error al poblar la DB
-		if(/*isset($this->idNew) && $this->idNew() && */!$this->getExpiresAt()){
+		//	Si no tiene fecha de expiracion se la asigno
+		if(!$this->getExpiresAt()){
 			$now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
 
 			//	Trabajando con parametros de la app
 			$this->setExpiresAt(date('Y-m-d H:i:s', time() + 86400 * sfConfig::get('app_active_days')));
+		}
+
+		//	Si no tiene token se lo agrego
+		if(!$this->getToken()){
+			$this->setToken(sha1($this->getEmail().rand(11111, 99999)));
 		}
 
 		return parent::save($conn);
