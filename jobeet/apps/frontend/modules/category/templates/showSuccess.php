@@ -25,9 +25,7 @@
 			<?php if($page == $pager->getPage()): ?>
 				<?php echo $page ?>
 			<?php else: ?>
-				<a href="<?php echo url_for('category', $category) ?>?page=<?php echo $page ?>">
-					<?php echo $page; ?>
-				</a>
+				<a href="<?php echo url_for('category', $category) ?>?page=<?php echo $page ?>"><?php echo $page; ?></a>
 			<?php endif; ?>
 		<?php endforeach; ?>
 

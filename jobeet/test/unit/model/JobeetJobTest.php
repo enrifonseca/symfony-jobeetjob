@@ -1,7 +1,7 @@
 <?php
 require_once(dirname(__FILE__). '/../../bootstrap/Doctrine.php');
 
-$test = new lime_test(2);
+$test = new lime_test(3);
 
 //	GetCompanySlug()
 

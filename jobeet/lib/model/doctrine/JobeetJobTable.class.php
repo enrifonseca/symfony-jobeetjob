@@ -33,7 +33,7 @@ class JobeetJobTable extends Doctrine_Table
     }
 
     public function addActiveJobsQuery(Doctrine_Query $query = null){
-        $query = is_null($query) ? Doctrine_Query::create()->from('JobbetJob j') : $query;
+        $query = is_null($query) ? Doctrine_Query::create()->from('JobeetJob j') : $query;
         $alias = $query->getRootAlias();
 
         return $query->andWhere($alias .'.expires_at > ?', Jobeet::getTime())
