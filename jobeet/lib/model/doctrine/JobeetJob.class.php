@@ -17,7 +17,9 @@ class JobeetJob extends BaseJobeetJob
 		return sprintf('%s at %s (%s)', $this->getPosition(), $this->getCompany(), $this->getLocation());
 	}
 
+	//	---------------------------------------
 	//	Funciones para hacer URLs Friendly
+	//	---------------------------------------
 
 	//	Retorna la prop company reemplazando caract no ASCCI por - (guion medio)
 	public function getCompanySlug(){
@@ -34,9 +36,12 @@ class JobeetJob extends BaseJobeetJob
 		return Jobeet::slugify($this->getLocation());
 	}
 
-	//	Fin funciones URLs Firendly
+	//	--------------------------------------- //
 
+	//	---------------------------------------
 	//	Reescribiendo metodo save()
+	//	---------------------------------------
+	
 	public function save(Doctrine_Connection $conn = null){
 		//	Si no tiene fecha de expiracion se la asigno
 		if(!$this->getExpiresAt()){
@@ -52,5 +57,35 @@ class JobeetJob extends BaseJobeetJob
 		}
 
 		return parent::save($conn);
+	}
+
+	//	--------------------------------------- //
+
+	//	---------------------------------------
+	//	Metodos para la barra de administracion
+	//	---------------------------------------
+
+	public function getTypeName(){
+		$types = Doctrine_Core::getTable('JobeetJob')->getTypes();
+		return $this->getType() ? $types[$this->getType()] : '';
+	}
+
+	public function isExpired(){
+		return $this->getDaysBeforeExpires() < 0;
+	}
+	
+	public function expiresSoon(){
+		return $this->getDaysBeforeExpires() < 5;
+	}
+
+	public function getDaysBeforeExpires(){
+		return ceil(($this->getDateTimeObject('expires_at')->format('U') - time()) / 86400);
+	}
+
+	//	--------------------------------------- //
+
+	public function publish(){
+		$this->setIsActivated(true);
+		$this->save();
 	}
 }

@@ -73,6 +73,17 @@ class jobActions extends sfActions
     $job->delete();
   }
 
+  public function executePublish(sfWebRequest $request){
+    $request->checkCSRFProtection();
+
+    $job = $this->getRoute()->getObject();
+    $job->publish();
+
+    $this->getUser()->setFlash('notice', sprintf('Your jobs is now online for %s days', sfConfig::get('app_active_days')));
+    $this->redirect($this->generateUrl('job_show_user', $job));
+  }
+
+
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     /*$form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));

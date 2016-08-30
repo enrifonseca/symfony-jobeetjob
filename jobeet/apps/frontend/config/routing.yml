@@ -8,8 +8,10 @@ job:
   options:
     model:            JobeetJob
     column:           token
+    object_actions:
+      publish:        put
   requeriments:
-      token: \w+
+      token:          \w+
 
 job_show_user:
   url:                /job/:company_slug/:location_slug/:id/:position_slug
