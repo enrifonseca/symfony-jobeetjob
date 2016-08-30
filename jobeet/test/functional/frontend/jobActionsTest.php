@@ -114,3 +114,16 @@ $browser->info('3 - Post a Job Page')
 		->isParameter('module', 'job')
 		->isParameter('action', 'create')
 	->end();
+
+$browser->setTester('doctrine', 'sfTesterDoctrine')
+	->with('doctrine')
+		->begin()
+		->check(
+			'JobeetJob',
+			array(
+				'location'	=>	'Cordoba',
+				'is_activated' => false,
+				'is_public' => false
+			)
+		)
+	->end();
