@@ -21,7 +21,7 @@ class JobeetCategoryTable extends Doctrine_Table
     public function getWithJobs(){
     	return $this->createQuery('c')
     		->leftJoin('c.JobeetJobs j')
-    		->where('j.expires_at > ?', date('Y-m-d h:i:s', time()))
+    		->where('j.expires_at > ?', Jobeet::getTime())
     		->execute();
     }
 }

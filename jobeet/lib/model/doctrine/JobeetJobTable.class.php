@@ -19,21 +19,11 @@ class JobeetJobTable extends Doctrine_Table
 
     //	Retorna todos los Jobs activos
     public function getActivesJobs(Doctrine_Query $query = null){
-        /*$query = is_null($query) ? Doctrine_Query::create()->from('JobeetJob j') : $query;
-
-        return $query->andWhere('j.expires_at > ?', date('Y-m-d h:i:s', time()))
-            ->addOrderBy('j.expires_at DESC')
-            ->execute();*/
-
         return $this->addActiveJobsQuery($query)->execute();
     }
 
     //  Retorna un Job en caso de no haber expirado
     public function retrieveActiveJob(Doctrine_Query $query = null){
-        /*$query = is_null($query) ? Doctrine_Query::create()->from('JobeetJob j') : $query;
-
-        return $query->andWhere('a.expires_at > ?', date('Y-m-d h:i:s', time()))
-            ->fetchOne();*/
         return $this->addActiveJobsQuery($query)->fetchOne();
     }
 
@@ -46,7 +36,7 @@ class JobeetJobTable extends Doctrine_Table
         $query = is_null($query) ? Doctrine_Query::create()->from('JobbetJob j') : $query;
         $alias = $query->getRootAlias();
 
-        return $query->andWhere($alias . '.expires_at > ?', date('Y-m-d h:i:s', time()))
-            ->addOrderBy($alias . '.expires_at DESC');
+        return $query->andWhere($alias .'.expires_at > ?', Jobeet::getTime())
+            ->addOrderBy($alias .'.expires_at DESC');
     }
 }
