@@ -115,8 +115,9 @@ $browser->info('3 - Post a Job Page')
 		->isParameter('action', 'create')
 	->end();
 
-$browser->setTester('doctrine', 'sfTesterDoctrine')
-	->with('doctrine')
+//	Verificando la existencia del registro anterior
+$browser->setTester('doctrine', 'sfTesterDoctrine');
+$browser->with('doctrine')
 		->begin()
 		->check(
 			'JobeetJob',
@@ -127,3 +128,37 @@ $browser->setTester('doctrine', 'sfTesterDoctrine')
 			)
 		)
 	->end();
+
+//	Probando en caso de enviar datos no validos
+$browser->info('	3.2 - Submit a Job with invalid values')
+	->get('/job/new')
+	->click('Preview your job', array(
+		'job' => array(
+			'company'      => 'Sensio Labs',
+    		'position'     => 'Developer',
+    		'location'     => 'Atlanta, USA',
+    		'email'        => 'not.an.email',
+		)
+	))
+	->with('form')
+		->begin()
+		->hasErrors(3)
+		->isError('description', 'required')
+		->isError('how_to_apply', 'required')
+		->isError('email', 'invalid')
+	->end();
+
+//	Ver el metodo!!!!!!!!!!!
+$browser->info('	3.3 - On the preview page, you can publish the job')
+	->createJob(array('position' => 'F001'))
+	->click('Publish', array(), array(
+		'method' => 'put',
+		'_with_csrf' => true
+	))
+	->with('doctrine')
+		->begin()
+		->check('JobeetJob', array(
+			'position' => 'F001',
+			'is_activated' => true
+		))
+		->end();
