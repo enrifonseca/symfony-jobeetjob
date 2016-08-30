@@ -74,5 +74,8 @@ class JobeetJobForm extends BaseJobeetJobForm
 
   	//	Agregando mensaje de ayuda a "Is public?"
   	$this->widgetSchema->setHelp('is_public', 'Wether the job can also be...');
+
+    //  Cambiando el formato del nombre
+    $this->widgetSchema->setNameFormat('job[%s]');
   }
 }

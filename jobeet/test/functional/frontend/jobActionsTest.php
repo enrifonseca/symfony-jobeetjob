@@ -84,3 +84,33 @@ $browser->info('	2.3 - An expired job page forwards the user to a 404')
 	)
 	->with('response')
 		->isStatusCode(404);
+
+//	Job - Agregando un job
+$browser->info('3 - Post a Job Page')
+	->info(' 3.1 - Submit a job')
+	->get('/job/new')
+	->with('request')
+		->begin()
+		->isParameter('module', 'job')
+		->isParameter('action', 'new')
+	->end()
+	->click('Preview your job', array('job' => array(
+		'company'	=>	'Company Test',
+		'url'	=>	'www.asdasd.com',
+		'logo'	=>	'as.png',
+		'position'	=>	'Sr',
+		'location'	=>	'Cordoba',
+		'description'	=>	'asdasdasdas',
+		'how_to_apply'	=>	'asdasdasdas',
+		'email'	=>	'mail@ejemplo.com',
+		'is_public'	=>	false,
+	)))
+	->with('form')
+		->begin()
+		->hasErrors(false)
+	->end()
+	->with('request')
+		->begin()
+		->isParameter('module', 'job')
+		->isParameter('action', 'create')
+	->end();
