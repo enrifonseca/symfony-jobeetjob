@@ -41,12 +41,11 @@ class JobeetJob extends BaseJobeetJob
 		
 		//	Al poblar la DB comentar el if, despues descomentarlo
 		//	Si no valido que idNew exista genera un error al poblar la DB
-		if(isset($this->idNew) && $this->idNew() && !$this->getExpiresAt()){
+		if(/*isset($this->idNew) && $this->idNew() && */!$this->getExpiresAt()){
 			$now = $this->getCreatedAt() ? $this->getDateTimeObject('created_at')->format('U') : time();
-			//$this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * 30));
 
 			//	Trabajando con parametros de la app
-			$this->setExpiresAt(date('Y-m-d H:i:s', $now + 86400 * sfConfig::get('app_active_days')));
+			$this->setExpiresAt(date('Y-m-d H:i:s', time() + 86400 * sfConfig::get('app_active_days')));
 		}
 
 		return parent::save($conn);
