@@ -54,7 +54,7 @@
             <div id="job_history">
                 Recent viewed jobs:
                 <ul>
-                    <?php foreach ($sf_user->getJobsHistory() as $job): ?>
+                    <?php foreach ($sf_user->getJobHistory() as $job): ?>
                         <li>
                             <?php echo link_to(
                                 $job->getPosition() .' - '. $job->getCompany(),
