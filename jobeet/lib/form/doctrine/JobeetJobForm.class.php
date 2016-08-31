@@ -13,13 +13,7 @@ class JobeetJobForm extends BaseJobeetJobForm
   public function configure()
   {
   	//	Eliminando campos del formulario
-  	unset(
-  		$this['created_at'],
-  		$this['updated_at'],
-  		$this['expires_at'],
-  		$this['is_activated'],
-  		$this['token']
-  	);
+    $this->removeFields();
 
   	//	Agregando validacion para el campo email
   	//$this->validatorSchema['email'] = new sfValidatorEmail();
@@ -77,5 +71,15 @@ class JobeetJobForm extends BaseJobeetJobForm
 
     //  Cambiando el formato del nombre
     $this->widgetSchema->setNameFormat('job[%s]');
+  }
+
+  protected function removeFields(){
+    unset(
+      $this['created_at'],
+      $this['updated_at'],
+      $this['expires_at'],
+      $this['is_activated'],
+      $this['token']
+    );
   }
 }

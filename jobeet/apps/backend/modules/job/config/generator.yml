@@ -43,7 +43,11 @@ generator:
         table_method: retrieveBackendJobList
       filter:
         display: [category_id, type, company, url, is_public, is_activated, email]
-      form:     ~
+      form:
+        class:  BackendJobeetJobForm
+        display:
+          Content:  [category_id, type, company, logo, url, position, location, description, how_to_apply, is_public, email]
+          Admin:    [_generated_token, is_activated, expires_at]
       
       # hereda de from, que hereda de fields, pero puede modificarlos
       edit:

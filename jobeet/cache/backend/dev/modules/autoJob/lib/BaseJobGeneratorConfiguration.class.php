@@ -77,7 +77,7 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
 
   public function getFormDisplay()
   {
-    return array();
+    return array(  'Content' =>   array(    0 => 'category_id',    1 => 'type',    2 => 'company',    3 => 'logo',    4 => 'url',    5 => 'position',    6 => 'location',    7 => 'description',    8 => 'how_to_apply',    9 => 'is_public',    10 => 'email',  ),  'Admin' =>   array(    0 => '_generated_token',    1 => 'is_activated',    2 => 'expires_at',  ),);
   }
 
   public function getEditDisplay()
@@ -241,7 +241,7 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
    */
   public function getFormClass()
   {
-    return 'JobeetjobForm';
+    return 'BackendJobeetJobForm';
   }
 
   public function hasFilterForm()
