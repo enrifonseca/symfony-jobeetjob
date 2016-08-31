@@ -10,6 +10,7 @@ job:
     column:           token
     object_actions:
       publish:        put
+      extend:         put
   requeriments:
       token:          \w+
 
