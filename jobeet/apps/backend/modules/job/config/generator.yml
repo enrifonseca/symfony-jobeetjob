@@ -12,8 +12,9 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions:
+      actions:  ~
       #    nivel general
+      
       fields:
         is_activated:
           label:  Activated?
@@ -21,6 +22,7 @@ generator:
         is_public:
           label:  Public?
           help:   Whether the job can also be published on affiliate websites, or not
+      
       list:
         title:    Job Management
         layout:   stacked
@@ -41,14 +43,17 @@ generator:
           deleteNeverActivated:
             label: Delete never activated jobs
         table_method: retrieveBackendJobList
+      
       filter:
         # indico los filros que quiero mostrar
         display: [category_id, company, position, description, is_activated, is_public, email]
+      
       form:
         class:  BackendJobeetJobForm
         display:
           Content:  [category_id, type, company, logo, url, position, location, description, how_to_apply, is_public, email]
           Admin:    [_generated_token, is_activated, expires_at]
+      
       
       # hereda de from, que hereda de fields, pero puede modificarlos
       edit:
