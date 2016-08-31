@@ -32,7 +32,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListObjectActions()
   {
-    return array(  '_edit' => NULL,  '_delete' => NULL,);
+    return array();
   }
 
   public function getListActions()
@@ -42,12 +42,12 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array();
   }
 
   public function getListParams()
   {
-    return '%%id%% - %%name%% - %%created_at%% - %%updated_at%% - %%slug%%';
+    return '%%=name%% - %%slug%%';
   }
 
   public function getListLayout()
@@ -57,27 +57,27 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListTitle()
   {
-    return 'Category List';
+    return 'Category Manegement';
   }
 
   public function getEditTitle()
   {
-    return 'Edit Category';
+    return 'Editing Category "%%name%%"';
   }
 
   public function getNewTitle()
   {
-    return 'New Category';
+    return 'New category';
   }
 
   public function getFilterDisplay()
   {
-    return array();
+    return array(  0 => '=name',  1 => 'slug',);
   }
 
   public function getFormDisplay()
   {
-    return array();
+    return array(  0 => '=name',);
   }
 
   public function getEditDisplay()
@@ -92,7 +92,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'name',  2 => 'created_at',  3 => 'updated_at',  4 => 'slug',);
+    return array(  0 => '=name',  1 => 'slug',);
   }
 
   public function getFieldsDefault()

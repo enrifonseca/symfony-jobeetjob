@@ -6,13 +6,13 @@
       <thead>
         <tr>
           <th id="sf_admin_list_batch_actions"><input id="sf_admin_list_batch_checkbox" type="checkbox" onclick="checkAll();" /></th>
-          <?php include_partial('job/list_th_tabular', array('sort' => $sort)) ?>
+          <?php include_partial('job/list_th_stacked', array('sort' => $sort)) ?>
           <th id="sf_admin_list_th_actions"><?php echo __('Actions', array(), 'sf_admin') ?></th>
         </tr>
       </thead>
       <tfoot>
         <tr>
-          <th colspan="19">
+          <th colspan="8">
             <?php if ($pager->haveToPaginate()): ?>
               <?php include_partial('job/pagination', array('pager' => $pager)) ?>
             <?php endif; ?>
@@ -28,7 +28,7 @@
         <?php foreach ($pager->getResults() as $i => $jobeetjob): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
           <tr class="sf_admin_row <?php echo $odd ?>">
             <?php include_partial('job/list_td_batch_actions', array('jobeetjob' => $jobeetjob, 'helper' => $helper)) ?>
-            <?php include_partial('job/list_td_tabular', array('jobeetjob' => $jobeetjob)) ?>
+            <?php include_partial('job/list_td_stacked', array('jobeetjob' => $jobeetjob)) ?>
             <?php include_partial('job/list_td_actions', array('jobeetjob' => $jobeetjob, 'helper' => $helper)) ?>
           </tr>
         <?php endforeach; ?>

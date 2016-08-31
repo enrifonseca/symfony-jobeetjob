@@ -32,47 +32,47 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
 
   public function getListObjectActions()
   {
-    return array(  '_edit' => NULL,  '_delete' => NULL,);
+    return array(  'extend' => NULL,  '_edit' => NULL,  '_delete' => NULL,);
   }
 
   public function getListActions()
   {
-    return array(  '_new' => NULL,);
+    return array(  'deleteNeverActivated' =>   array(    'label' => 'Delete never activated jobs',  ),);
   }
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array(  '_delete' => NULL,  'extend' => NULL,);
   }
 
   public function getListParams()
   {
-    return '%%id%% - %%category_id%% - %%type%% - %%company%% - %%logo%% - %%url%% - %%position%% - %%location%% - %%description%% - %%how_to_apply%% - %%token%% - %%is_public%% - %%is_activated%% - %%email%% - %%expires_at%% - %%created_at%% - %%updated_at%%';
+    return '%%is_activated%% <small>%%jobeet_category%%</small> - %%company%%(<em>%%email%%</em>) is looking for a %%=position%% (%%location%%))';
   }
 
   public function getListLayout()
   {
-    return 'tabular';
+    return 'stacked';
   }
 
   public function getListTitle()
   {
-    return 'Job List';
+    return 'Job Management';
   }
 
   public function getEditTitle()
   {
-    return 'Edit Job';
+    return 'Editing Job "%%company%%" is looking for a %%position%%';
   }
 
   public function getNewTitle()
   {
-    return 'New Job';
+    return 'Job Creation';
   }
 
   public function getFilterDisplay()
   {
-    return array();
+    return array(  0 => 'category_id',  1 => 'type',  2 => 'company',  3 => 'url',  4 => 'is_public',  5 => 'is_activated',  6 => 'email',);
   }
 
   public function getFormDisplay()
@@ -87,12 +87,12 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
 
   public function getNewDisplay()
   {
-    return array();
+    return array(  0 => 'category_id',  1 => 'type',  2 => 'company',  3 => 'logo',  4 => 'url',  5 => 'position',  6 => 'location',  7 => 'description',  8 => 'how_to_apply',  9 => 'is_public',  10 => 'email',);
   }
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'category_id',  2 => 'type',  3 => 'company',  4 => 'logo',  5 => 'url',  6 => 'position',  7 => 'location',  8 => 'description',  9 => 'how_to_apply',  10 => 'token',  11 => 'is_public',  12 => 'is_activated',  13 => 'email',  14 => 'expires_at',  15 => 'created_at',  16 => 'updated_at',);
+    return array(  0 => 'company',  1 => 'position',  2 => 'location',  3 => 'url',  4 => 'is_activated',  5 => 'email',);
   }
 
   public function getFieldsDefault()
@@ -109,8 +109,8 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
       'description' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'how_to_apply' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'token' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
-      'is_public' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Boolean',),
-      'is_activated' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Boolean',),
+      'is_public' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Boolean',  'label' => 'Public?',  'help' => 'Whether the job can also be published on affiliate websites, or not',),
+      'is_activated' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Boolean',  'label' => 'Activated?',  'help' => 'Whether the user has activated the job, or not',),
       'email' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Text',),
       'expires_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
       'created_at' => array(  'is_link' => false,  'is_real' => true,  'is_partial' => false,  'is_component' => false,  'type' => 'Date',),
@@ -266,17 +266,17 @@ abstract class BaseJobGeneratorConfiguration extends sfModelGeneratorConfigurati
 
   public function getPagerMaxPerPage()
   {
-    return 20;
+    return 10;
   }
 
   public function getDefaultSort()
   {
-    return array(null, null);
+    return array('expires_at', 'desc');
   }
 
   public function getTableMethod()
   {
-    return '';
+    return 'retrieveBackendJobList';
   }
 
   public function getTableCountMethod()

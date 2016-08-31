@@ -12,10 +12,44 @@ generator:
     actions_base_class:    sfActions
 
     config:
-      actions: ~
-      fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      actions:
+      #    nivel general
+      fields:
+        is_activated:
+          label:  Activated?
+          help:   Whether the user has activated the job, or not
+        is_public:
+          label:  Public?
+          help:   Whether the job can also be published on affiliate websites, or not
+      list:
+        title:    Job Management
+        layout:   stacked
+        display:  [company, position, location, url, is_activated, email]
+        params:   |
+                  %%is_activated%% <small>%%jobeet_category%%</small> - %%company%%
+                  (<em>%%email%%</em>) is looking for a %%=position%% (%%location%%))
+        sort:     [expires_at, desc]
+        max_per_page: 10
+        batch_actions:
+          _delete: ~
+          extend: ~
+        object_actions:
+          extend:  ~
+          _edit:    ~
+          _delete:  ~
+        actions:
+          deleteNeverActivated:
+            label: Delete never activated jobs
+        table_method: retrieveBackendJobList
+      filter:
+        display: [category_id, type, company, url, is_public, is_activated, email]
+      form:     ~
+      
+      # hereda de from, que hereda de fields, pero puede modificarlos
+      edit:
+        title:  Editing Job "%%company%%" is looking for a %%position%%
+      
+      # hereda de from, que hereda de fields, pero puede modificarlos
+      new:
+        title:  Job Creation
+        display: [category_id, type, company, logo, url, position, location, description, how_to_apply, is_public, email]

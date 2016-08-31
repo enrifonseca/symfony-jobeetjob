@@ -57,4 +57,9 @@ class JobeetJobTable extends Doctrine_Table
             ->andWhere('a.created_at < ?', date('Y-m-d', time() - 86400 * $days))
             ->execute();
     }
+
+    public function retrieveBackendJobList(Doctrine_Query $query){
+        $rootAlias = $query->getRootAlias();
+        return $query->leftJoin($rootAlias .'.JobeetCategory c');
+    }
 }

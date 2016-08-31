@@ -2,7 +2,7 @@
 <?php include_partial('job/assets') ?>
 
 <div id="sf_admin_container">
-  <h1><?php echo __('New Job', array(), 'messages') ?></h1>
+  <h1><?php echo __('Job Creation', array(), 'messages') ?></h1>
 
   <?php include_partial('job/flashes') ?>
 

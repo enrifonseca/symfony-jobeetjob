@@ -14,8 +14,17 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
-      filter:  ~
-      form:    ~
-      edit:    ~
-      new:     ~
+      list:
+        display: [=name, slug]
+        title:  Category Manegement
+        # configurando que columnas muestro
+        batch_actions: {}
+        object_actions: {}
+      filter:
+        display: [=name, slug]
+      form:
+        display: [=name]
+      edit:
+        title:  Editing Category "%%name%%"
+      new:
+        title:  New category
