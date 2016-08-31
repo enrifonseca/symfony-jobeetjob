@@ -62,4 +62,13 @@ class JobeetJobTable extends Doctrine_Table
         $rootAlias = $query->getRootAlias();
         return $query->leftJoin($rootAlias .'.JobeetCategory c');
     }
+
+    public function getLastestPost(){
+        $query = Doctrine_Query::create()
+            ->from('JobeetJob j');
+
+        $this->addActiveJobsQuery($query);
+
+        return $query->fetchOne();
+    }
 }
