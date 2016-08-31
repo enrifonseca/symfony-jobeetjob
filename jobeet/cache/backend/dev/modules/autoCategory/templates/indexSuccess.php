@@ -10,9 +10,6 @@
     <?php include_partial('category/list_header', array('pager' => $pager)) ?>
   </div>
 
-  <div id="sf_admin_bar">
-    <?php include_partial('category/filters', array('form' => $filters, 'configuration' => $configuration)) ?>
-  </div>
 
   <div id="sf_admin_content">
     <?php include_partial('category/list', array('pager' => $pager, 'sort' => $sort, 'helper' => $helper)) ?>

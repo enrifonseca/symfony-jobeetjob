@@ -47,32 +47,6 @@ abstract class autoCategoryActions extends sfActions
     $this->sort = $this->getSort();
   }
 
-  public function executeFilter(sfWebRequest $request)
-  {
-    $this->setPage(1);
-
-    if ($request->hasParameter('_reset'))
-    {
-      $this->setFilters($this->configuration->getFilterDefaults());
-
-      $this->redirect('@jobeet_category');
-    }
-
-    $this->filters = $this->configuration->getFilterForm($this->getFilters());
-
-    $this->filters->bind($request->getParameter($this->filters->getName()));
-    if ($this->filters->isValid())
-    {
-      $this->setFilters($this->filters->getValues());
-
-      $this->redirect('@jobeet_category');
-    }
-
-    $this->pager = $this->getPager();
-    $this->sort = $this->getSort();
-
-    $this->setTemplate('index');
-  }
 
   public function executeNew(sfWebRequest $request)
   {
@@ -165,15 +139,6 @@ abstract class autoCategoryActions extends sfActions
     }
   }
 
-  protected function getFilters()
-  {
-    return $this->getUser()->getAttribute('category.filters', $this->configuration->getFilterDefaults(), 'admin_module');
-  }
-
-  protected function setFilters(array $filters)
-  {
-    return $this->getUser()->setAttribute('category.filters', $filters, 'admin_module');
-  }
 
   protected function getPager()
   {
@@ -198,14 +163,13 @@ abstract class autoCategoryActions extends sfActions
   protected function buildQuery()
   {
     $tableMethod = $this->configuration->getTableMethod();
-    if (null === $this->filters)
+    $query = Doctrine_Core::getTable('JobeetCategory')
+      ->createQuery('a');
+
+    if ($tableMethod)
     {
-      $this->filters = $this->configuration->getFilterForm($this->getFilters());
+      $query = Doctrine_Core::getTable('JobeetCategory')->$tableMethod($query);
     }
-
-    $this->filters->setTableMethod($tableMethod);
-
-    $query = $this->filters->buildQuery($this->getFilters());
 
     $this->addSortQuery($query);
 

@@ -72,7 +72,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function getFilterDisplay()
   {
-    return array(  0 => '=name',  1 => 'slug',);
+    return array();
   }
 
   public function getFormDisplay()
@@ -180,7 +180,7 @@ abstract class BaseCategoryGeneratorConfiguration extends sfModelGeneratorConfig
 
   public function hasFilterForm()
   {
-    return true;
+    return false;
   }
 
   /**

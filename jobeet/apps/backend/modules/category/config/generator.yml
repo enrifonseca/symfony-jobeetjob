@@ -21,7 +21,8 @@ generator:
         batch_actions: {}
         object_actions: {}
       filter:
-        display: [=name, slug]
+        # esto deja sin filtro a categoria
+        class: false
       form:
         display: [=name]
       edit:
