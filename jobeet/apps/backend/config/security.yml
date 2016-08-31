@@ -1,5 +1,12 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/08-Security
 
+# pasando a true la variable is_secure pide autenticacion para ingresar al backend
+
 default:
-  is_secure: false
+  is_secure:    false
+  #creadentials: admin
+
+# podemos especificar la seguridad para cada uno de los modulos o los action
+#index:
+#  is_secure: true

@@ -109,3 +109,1157 @@ Aug 31 15:30:27 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actio
 Aug 31 15:30:27 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.34 ms (1)
 Aug 31 15:30:27 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.15 ms (1)
 Aug 31 15:30:27 symfony [info] {sfWebResponse} Send content (166594 o)
+Aug 31 15:47:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:47:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:47:26 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:47:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:47:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:47:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:47:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:47:26 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:47:26 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:47:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:47:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:47:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Configuration 0.58 ms (11)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Factories 20.01 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Action "job/index" 15.48 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (4)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 40.26 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.22 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.19 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.15 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 9.41 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 6.75 ms (7)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list" 23.99 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.32 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.11 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.55 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 2.05 ms (10)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 7.02 ms (10)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 1.98 ms (10)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.69 ms (10)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.32 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.33 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.16 ms (1)
+Aug 31 15:47:26 symfony [info] {sfWebResponse} Send content (166977 o)
+Aug 31 15:47:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:47:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:47:30 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:47:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:47:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:47:30 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:47:30 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:47:30 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:30 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:47:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:47:30 symfony [info] {sfWebDebugLogger} Configuration 4.84 ms (15)
+Aug 31 15:47:30 symfony [info] {sfWebDebugLogger} Factories 20.88 ms (1)
+Aug 31 15:47:30 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:47:30 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 11.21 ms (1)
+Aug 31 15:47:30 symfony [info] {sfWebResponse} Send content (31217 o)
+Aug 31 15:47:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /default/login with parameters array (  'module' => 'default',  'action' => 'login',)
+Aug 31 15:47:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:47:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:47:32 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:47:32 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:47:32 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:32 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:47:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:47:32 symfony [info] {sfWebDebugLogger} Configuration 0.41 ms (9)
+Aug 31 15:47:32 symfony [info] {sfWebDebugLogger} Factories 19.78 ms (1)
+Aug 31 15:47:32 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:47:32 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.00 ms (1)
+Aug 31 15:47:32 symfony [info] {sfWebResponse} Send content (29906 o)
+Aug 31 15:47:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:47:35 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:47:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:47:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:47:35 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:47:35 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:47:35 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:35 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:47:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:47:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:47:35 symfony [info] {sfWebDebugLogger} Configuration 0.74 ms (14)
+Aug 31 15:47:35 symfony [info] {sfWebDebugLogger} Factories 21.77 ms (1)
+Aug 31 15:47:35 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:47:35 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 3.93 ms (1)
+Aug 31 15:47:35 symfony [info] {sfWebResponse} Send content (31183 o)
+Aug 31 15:48:49 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:48:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:48:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:48:49 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:48:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:48:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:48:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:48:49 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:48:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:48:49 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:48:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:48:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:48:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:48:49 symfony [info] {sfWebDebugLogger} Configuration 5.08 ms (15)
+Aug 31 15:48:49 symfony [info] {sfWebDebugLogger} Factories 21.40 ms (1)
+Aug 31 15:48:49 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:48:49 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.51 ms (1)
+Aug 31 15:48:49 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:48:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:48:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:48:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:48:57 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:48:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:48:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:48:57 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:48:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:48:57 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:48:57 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:48:57 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:48:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:48:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Configuration 4.72 ms (12)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Factories 26.92 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Action "job/index" 17.75 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 42.42 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.30 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.24 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.21 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 10.15 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 7.16 ms (7)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list" 24.12 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.45 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.21 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.60 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 1.97 ms (10)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 6.99 ms (10)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 2.01 ms (10)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.62 ms (10)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.32 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.34 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.16 ms (1)
+Aug 31 15:48:57 symfony [info] {sfWebResponse} Send content (167010 o)
+Aug 31 15:49:09 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:49:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:49:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:49:09 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:49:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:49:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:49:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:49:09 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:49:09 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:49:09 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:49:09 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:49:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:49:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:49:09 symfony [info] {sfWebDebugLogger} Configuration 5.11 ms (15)
+Aug 31 15:49:09 symfony [info] {sfWebDebugLogger} Factories 23.48 ms (1)
+Aug 31 15:49:09 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:49:09 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.81 ms (1)
+Aug 31 15:49:09 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:50:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:50:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:50:42 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:50:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:50:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:50:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:50:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:50:42 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:50:42 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:50:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Configuration 4.53 ms (12)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Factories 21.40 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Action "job/index" 17.00 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (4)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 41.34 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.23 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.19 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.15 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 9.24 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 6.57 ms (7)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list" 23.96 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.32 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.11 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.56 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 1.97 ms (10)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 6.98 ms (10)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 1.99 ms (10)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.58 ms (10)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.32 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.33 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.15 ms (1)
+Aug 31 15:50:42 symfony [info] {sfWebResponse} Send content (167009 o)
+Aug 31 15:50:44 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:50:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:50:44 symfony [info] {categoryActions} Call "categoryActions->executeIndex()"
+Aug 31 15:50:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:50:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_category j - ()
+Aug 31 15:50:44 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/indexSuccess.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_assets.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_flashes.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_header.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_th_tabular.php"
+Aug 31 15:50:44 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:44 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:44 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:44 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j LIMIT 20 - ()
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_batch_actions.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_actions.php"
+Aug 31 15:50:44 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_footer.php"
+Aug 31 15:50:44 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:44 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:50:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Configuration 4.19 ms (12)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Factories 22.04 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Action "category/index" 7.93 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (3)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} View "Success" for "category/index" 12.32 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_assets" 0.19 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_flashes" 0.19 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_header" 0.16 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list" 6.21 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_th_tabular" 0.55 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_td_tabular" 1.92 ms (4)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_batch_actions" 0.16 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_actions" 0.23 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebDebugLogger} Partial "category/_list_footer" 0.15 ms (1)
+Aug 31 15:50:44 symfony [info] {sfWebResponse} Send content (52110 o)
+Aug 31 15:50:47 symfony [info] {sfPatternRouting} Match route "jobeet_category_new" (/category/new.:sf_format) for /category/new with parameters array (  'module' => 'category',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 15:50:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:50:47 symfony [info] {sfBasicSecurityFilter} Action "category/new" requires authentication, forwarding to "default/login"
+Aug 31 15:50:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:50:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:50:47 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:50:47 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:50:47 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:50:47 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:50:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:50:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:50:47 symfony [info] {sfWebDebugLogger} Configuration 4.27 ms (15)
+Aug 31 15:50:47 symfony [info] {sfWebDebugLogger} Factories 20.64 ms (1)
+Aug 31 15:50:47 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:50:47 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.29 ms (1)
+Aug 31 15:50:47 symfony [info] {sfWebResponse} Send content (31442 o)
+Aug 31 15:50:49 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:50:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:50:49 symfony [info] {categoryActions} Call "categoryActions->executeIndex()"
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_category j - ()
+Aug 31 15:50:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/indexSuccess.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_assets.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_flashes.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_header.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_th_tabular.php"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j LIMIT 20 - ()
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_footer.php"
+Aug 31 15:50:49 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:50:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Configuration 0.63 ms (11)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Factories 20.12 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Action "category/index" 8.39 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (3)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} View "Success" for "category/index" 12.58 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_assets" 0.23 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_flashes" 0.19 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_header" 0.15 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list" 6.33 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_th_tabular" 0.55 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_td_tabular" 2.08 ms (4)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_batch_actions" 0.16 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_actions" 0.24 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebDebugLogger} Partial "category/_list_footer" 0.20 ms (1)
+Aug 31 15:50:49 symfony [info] {sfWebResponse} Send content (52110 o)
+Aug 31 15:50:49 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:50:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:50:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:50:49 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:50:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:49 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:50:50 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:50:50 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:50 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:50:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:50:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Configuration 0.54 ms (11)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Factories 20.43 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Action "job/index" 14.79 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 41.09 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.25 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.30 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.17 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 9.23 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 6.52 ms (7)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list" 24.82 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.34 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.12 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.55 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 2.24 ms (10)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 7.47 ms (10)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 2.21 ms (10)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.83 ms (10)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.34 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.36 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.17 ms (1)
+Aug 31 15:50:50 symfony [info] {sfWebResponse} Send content (167058 o)
+Aug 31 15:51:33 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:51:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:33 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:51:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:51:33 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:51:33 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:51:33 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:33 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:51:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:33 symfony [info] {sfWebDebugLogger} Configuration 5.13 ms (15)
+Aug 31 15:51:33 symfony [info] {sfWebDebugLogger} Factories 21.96 ms (1)
+Aug 31 15:51:33 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:51:33 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.31 ms (1)
+Aug 31 15:51:33 symfony [info] {sfWebResponse} Send content (31296 o)
+Aug 31 15:51:36 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:51:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:36 symfony [info] {sfBasicSecurityFilter} Action "category/index" requires authentication, forwarding to "default/login"
+Aug 31 15:51:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:51:36 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:51:36 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:51:36 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:36 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:51:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:36 symfony [info] {sfWebDebugLogger} Configuration 4.62 ms (15)
+Aug 31 15:51:36 symfony [info] {sfWebDebugLogger} Factories 22.41 ms (1)
+Aug 31 15:51:36 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:51:36 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.37 ms (1)
+Aug 31 15:51:36 symfony [info] {sfWebResponse} Send content (31339 o)
+Aug 31 15:51:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /category/index with parameters array (  'module' => 'category',  'action' => 'index',)
+Aug 31 15:51:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:42 symfony [info] {sfBasicSecurityFilter} Action "category/index" requires authentication, forwarding to "default/login"
+Aug 31 15:51:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:51:42 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:51:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:51:42 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:51:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:42 symfony [info] {sfWebDebugLogger} Configuration 0.68 ms (14)
+Aug 31 15:51:42 symfony [info] {sfWebDebugLogger} Factories 20.06 ms (1)
+Aug 31 15:51:42 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:51:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.00 ms (1)
+Aug 31 15:51:42 symfony [info] {sfWebResponse} Send content (31286 o)
+Aug 31 15:51:45 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/category/" (/).
+Aug 31 15:51:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Aug 31 15:51:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:45 symfony [info] {sfWebDebugLogger} Configuration 0.29 ms (5)
+Aug 31 15:51:45 symfony [info] {sfWebDebugLogger} Factories 19.87 ms (1)
+Aug 31 15:51:49 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:51:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:49 symfony [info] {sfBasicSecurityFilter} Action "category/index" requires authentication, forwarding to "default/login"
+Aug 31 15:51:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:51:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:51:49 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:51:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:51:49 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:49 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:51:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:51:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:49 symfony [info] {sfWebDebugLogger} Configuration 0.70 ms (14)
+Aug 31 15:51:49 symfony [info] {sfWebDebugLogger} Factories 20.99 ms (1)
+Aug 31 15:51:49 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:51:49 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 3.99 ms (1)
+Aug 31 15:51:49 symfony [info] {sfWebResponse} Send content (31339 o)
+Aug 31 15:51:56 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:51:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:51:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:51:56 symfony [info] {categoryActions} Call "categoryActions->executeIndex()"
+Aug 31 15:51:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:51:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_category j - ()
+Aug 31 15:51:56 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/indexSuccess.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_assets.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_flashes.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_header.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_th_tabular.php"
+Aug 31 15:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:51:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:51:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:51:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j LIMIT 20 - ()
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_td_tabular.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_batch_actions.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_actions.php"
+Aug 31 15:51:56 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoCategory/templates/_list_footer.php"
+Aug 31 15:51:56 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:51:56 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:51:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:51:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Configuration 4.42 ms (12)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Factories 21.08 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Action "category/index" 8.66 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (3)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} View "Success" for "category/index" 13.61 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_assets" 0.24 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_flashes" 0.19 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_header" 0.15 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list" 6.32 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_th_tabular" 0.60 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_td_tabular" 1.92 ms (4)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_batch_actions" 0.14 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_actions" 0.25 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebDebugLogger} Partial "category/_list_footer" 0.15 ms (1)
+Aug 31 15:51:56 symfony [info] {sfWebResponse} Send content (52069 o)
+Aug 31 15:52:00 symfony [info] {sfPatternRouting} Match route "jobeet_category" (/category.:sf_format) for /category with parameters array (  'module' => 'category',  'action' => 'index',  'sf_format' => 'html',)
+Aug 31 15:52:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:52:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:52:00 symfony [info] {sfBasicSecurityFilter} Action "category/index" requires authentication, forwarding to "default/login"
+Aug 31 15:52:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:52:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:52:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:52:00 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:52:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:52:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:52:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:52:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:52:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:52:00 symfony [info] {sfWebDebugLogger} Configuration 4.84 ms (15)
+Aug 31 15:52:00 symfony [info] {sfWebDebugLogger} Factories 22.62 ms (1)
+Aug 31 15:52:00 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:52:00 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.24 ms (1)
+Aug 31 15:52:00 symfony [info] {sfWebResponse} Send content (31371 o)
+Aug 31 15:52:03 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:52:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:52:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:52:03 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:52:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:52:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:52:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:52:03 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:52:03 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:52:03 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:52:03 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:52:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:52:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:52:03 symfony [info] {sfWebDebugLogger} Configuration 4.27 ms (15)
+Aug 31 15:52:03 symfony [info] {sfWebDebugLogger} Factories 20.94 ms (1)
+Aug 31 15:52:03 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:52:03 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.04 ms (1)
+Aug 31 15:52:03 symfony [info] {sfWebResponse} Send content (31183 o)
+Aug 31 15:52:10 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:52:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:52:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:52:10 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:52:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:52:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:52:10 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:52:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:52:10 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:52:10 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:52:10 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:52:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:52:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Configuration 4.28 ms (12)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Factories 21.57 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Action "job/index" 15.63 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 41.56 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.21 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.19 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.15 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 9.34 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 6.71 ms (7)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list" 25.25 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.67 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.43 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.60 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 2.23 ms (10)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 7.37 ms (10)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 2.16 ms (10)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.87 ms (10)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.34 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.35 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.17 ms (1)
+Aug 31 15:52:10 symfony [info] {sfWebResponse} Send content (167009 o)
+Aug 31 15:53:33 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:53:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:53:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:53:33 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 15:53:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 15:53:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Aug 31 15:53:33 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/indexSuccess.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_assets.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_flashes.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_header.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_filters_field.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_th_tabular.php"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_pagination.php"
+Aug 31 15:53:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_stacked.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_field_boolean.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_td_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_batch_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_actions.php"
+Aug 31 15:53:33 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/cache/backend/dev/modules/autoJob/templates/_list_footer.php"
+Aug 31 15:53:33 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:53:33 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/backend/templates/layout.php"
+Aug 31 15:53:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:53:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Configuration 0.62 ms (11)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Factories 21.13 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Action "job/index" 17.09 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 41.56 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.22 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.20 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.16 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 9.79 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 7.01 ms (7)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list" 24.50 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.43 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.19 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.58 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 2.07 ms (10)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 7.07 ms (10)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 2.01 ms (10)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 7.77 ms (10)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.32 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.33 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.15 ms (1)
+Aug 31 15:53:33 symfony [info] {sfWebResponse} Send content (167009 o)
+Aug 31 15:53:38 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:53:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:53:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:53:38 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:53:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:53:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:53:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:53:38 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:53:38 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:53:38 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:53:38 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:53:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:53:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:53:38 symfony [info] {sfWebDebugLogger} Configuration 5.21 ms (15)
+Aug 31 15:53:38 symfony [info] {sfWebDebugLogger} Factories 21.61 ms (1)
+Aug 31 15:53:38 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:53:38 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.47 ms (1)
+Aug 31 15:53:38 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:53:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:53:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:53:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:53:57 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:53:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:53:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:53:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:53:57 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:53:57 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:53:57 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:53:57 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:53:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:53:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:53:57 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (14)
+Aug 31 15:53:57 symfony [info] {sfWebDebugLogger} Factories 19.98 ms (1)
+Aug 31 15:53:57 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:53:57 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.79 ms (1)
+Aug 31 15:53:57 symfony [info] {sfWebResponse} Send content (31216 o)
+Aug 31 15:55:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:26 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:26 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Configuration 0.86 ms (14)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Factories 29.29 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.51 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:55:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:26 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:26 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:26 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Configuration 0.64 ms (14)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Factories 20.96 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.20 ms (1)
+Aug 31 15:55:26 symfony [info] {sfWebResponse} Send content (31214 o)
+Aug 31 15:55:27 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:27 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:27 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:27 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:27 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:27 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:27 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (14)
+Aug 31 15:55:27 symfony [info] {sfWebDebugLogger} Factories 21.10 ms (1)
+Aug 31 15:55:27 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:55:27 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.13 ms (1)
+Aug 31 15:55:27 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:55:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:37 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:37 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:37 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:37 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:37 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:37 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (14)
+Aug 31 15:55:37 symfony [info] {sfWebDebugLogger} Factories 21.37 ms (1)
+Aug 31 15:55:37 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:55:37 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.49 ms (1)
+Aug 31 15:55:37 symfony [info] {sfWebResponse} Send content (31215 o)
+Aug 31 15:55:38 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:38 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:38 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:38 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:38 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:38 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:38 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (14)
+Aug 31 15:55:38 symfony [info] {sfWebDebugLogger} Factories 22.03 ms (1)
+Aug 31 15:55:38 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:55:38 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.17 ms (1)
+Aug 31 15:55:38 symfony [info] {sfWebResponse} Send content (31214 o)
+Aug 31 15:55:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /default/login with parameters array (  'module' => 'default',  'action' => 'login',)
+Aug 31 15:55:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:40 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:40 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:40 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:40 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:40 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:40 symfony [info] {sfWebDebugLogger} Configuration 0.42 ms (9)
+Aug 31 15:55:40 symfony [info] {sfWebDebugLogger} Factories 21.64 ms (1)
+Aug 31 15:55:40 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:55:40 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.14 ms (1)
+Aug 31 15:55:40 symfony [info] {sfWebResponse} Send content (29905 o)
+Aug 31 15:55:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:42 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:42 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Configuration 0.67 ms (14)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Factories 20.97 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.14 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send content (31183 o)
+Aug 31 15:55:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:42 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Aug 31 15:55:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 15:55:42 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/loginSuccess.php"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:42 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Configuration 0.70 ms (14)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Factories 22.01 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} Action "default/login" 0.04 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 4.37 ms (1)
+Aug 31 15:55:42 symfony [info] {sfWebResponse} Send content (31215 o)
