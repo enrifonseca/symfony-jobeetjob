@@ -12888,3 +12888,513 @@ Aug 31 10:46:18 symfony [info] {sfWebResponse} Send content (3045 o)
 Aug 31 10:46:18 symfony [info] {myUser} Remove old flash messages ("notice")
 Aug 31 10:46:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ?) - (FOO5)
 Aug 31 10:46:18 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET expires_at = ? WHERE id = ? - (2016-08-31, 3301)
+Aug 31 11:04:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_job - ()
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_category - ()
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.slug AS j__slug FROM jobeet_category j WHERE (j.slug LIKE ?) - (design%)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (name, created_at, updated_at, slug) VALUES (?, ?, ?, ?) - (Design, 2016-08-31 11:04:56, 2016-08-31 11:04:56, design)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.slug AS j__slug FROM jobeet_category j WHERE (j.slug LIKE ?) - (programming%)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (name, created_at, updated_at, slug) VALUES (?, ?, ?, ?) - (Programming, 2016-08-31 11:04:56, 2016-08-31 11:04:56, programming)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.slug AS j__slug FROM jobeet_category j WHERE (j.slug LIKE ?) - (manager%)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (name, created_at, updated_at, slug) VALUES (?, ?, ?, ?) - (Manager, 2016-08-31 11:04:56, 2016-08-31 11:04:56, manager)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.slug AS j__slug FROM jobeet_category j WHERE (j.slug LIKE ?) - (administrator%)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (name, created_at, updated_at, slug) VALUES (?, ?, ?, ?) - (Administrator, 2016-08-31 11:04:56, 2016-08-31 11:04:56, administrator)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, logo, url, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, full-time, Sensio Labs, sensio-labs.gif, http://www.sensiolabs.com/, Web Developer, Paris, France, [0.27Kb], Send your resume to fabien.potencier [at] sensio.com
+, job_sensio_labs, job@example.com, 2016-10-10, 2016-08-31 11:04:56, 2016-08-31 11:04:56)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, logo, url, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 373, part-time, Extreme Sensio, extreme-sensio.gif, http://www.extreme-sensio.com/, Web Designer, Paris, France, [0.44Kb], Send your resume to fabien.potencier [at] sensio.com
+, job_extreme_sensio, job@example.com, 2016-09-10, 2016-08-31 11:04:56, 2016-08-31 11:04:56)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, created_at, expires_at, token, email, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Sensio Labs, Web Developer Exp, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] dolor.sit, 2005-12-01 00:00:00, 2016-08-28, job_expired, job@example.com, 2016-08-31 11:04:56)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 100, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_100.sit
+, job_100, job@example.com, 2016-09-30, 2016-08-31 11:04:56, 2016-08-31 11:04:56)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 101, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_101.sit
+, job_101, job@example.com, 2016-09-30, 2016-08-31 11:04:56, 2016-08-31 11:04:56)
+Aug 31 11:04:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 102, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_102.sit
+, job_102, job@example.com, 2016-09-30, 2016-08-31 11:04:56, 2016-08-31 11:04:56)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 103, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_103.sit
+, job_103, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 104, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_104.sit
+, job_104, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 105, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_105.sit
+, job_105, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 106, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_106.sit
+, job_106, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 107, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_107.sit
+, job_107, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 108, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_108.sit
+, job_108, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 109, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_109.sit
+, job_109, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 110, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_110.sit
+, job_110, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 111, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_111.sit
+, job_111, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 112, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_112.sit
+, job_112, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 113, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_113.sit
+, job_113, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 114, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_114.sit
+, job_114, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 115, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_115.sit
+, job_115, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 116, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_116.sit
+, job_116, job@example.com, 2016-09-30, 2016-08-31 11:04:58, 2016-08-31 11:04:58)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 117, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_117.sit
+, job_117, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 118, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_118.sit
+, job_118, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 119, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_119.sit
+, job_119, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 120, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_120.sit
+, job_120, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 121, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_121.sit
+, job_121, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 122, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_122.sit
+, job_122, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 123, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_123.sit
+, job_123, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 124, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_124.sit
+, job_124, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 125, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_125.sit
+, job_125, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 126, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_126.sit
+, job_126, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 127, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_127.sit
+, job_127, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 128, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_128.sit
+, job_128, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 129, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_129.sit
+, job_129, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 374, Company 130, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_130.sit
+, job_130, job@example.com, 2016-09-30, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5791 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5791 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5791 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5791 o)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (373, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC LIMIT 10 - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_list.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.expires_at > ? AND j.is_activated = ? - (374, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5791 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/sensio-labs/paris-france/3302/web-developer with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'sensio-labs',  'location_slug' => 'paris-france',  'id' => '3302',  'position_slug' => 'web-developer',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (3302, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:04:59 symfony [info] {main} Set slot "title"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (3362 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/company-slug/location-slug/0/position_slug with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'company-slug',  'location_slug' => 'location-slug',  'id' => '0',  'position_slug' => 'position_slug',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (0, 2016-08-31 11:04:59, 1)
+Aug 31 11:04:59 symfony [err] {sfError404Exception} Unable to find the JobeetJob object with the following parameters "array (  'company_slug' => 'company-slug',  'location_slug' => 'location-slug',  'id' => '0',  'position_slug' => 'position_slug',)").
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.expires_at < ?) - (2016-08-31)
+Aug 31 11:04:59 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "<a href="/job/sensio-labs/paris-france/3304/web-developer-exp">test</a>" (/).
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Company Test, www.asdasd.com, Sr, Cordoba, asdasdasdas, asdasdasdas, mail@ejemplo.com, 2016-09-30 11:04:59, 07b70e9b0daf0f67a63a73a387e2fb4478991785, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:04:59 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/07b70e9b0daf0f67a63a73a387e2fb4478991785"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.location = ? AND j.is_activated = ? AND j.is_public = ?) - (Cordoba, 0, 0)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:04:59 symfony [info] {jobActions} Change template to "CURRENT/new"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (5282 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:04:59 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:04:59 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:04:59 symfony [info] {main} Get slot "title"
+Aug 31 11:04:59 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:04:59 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:04:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:04:59 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:04:59 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Sensio Labs, http://www.sensio.com/, F001, Atlanta, USA, You will work with symfony to develop websites for our customers., Send me an email, for.a.job@example.com, 2016-09-30 11:04:59, cf04976374f45beb173acf92d97b3539f961f506, 2016-08-31 11:04:59, 2016-08-31 11:04:59)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/cf04976374f45beb173acf92d97b3539f961f506"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show" (/job/:token.:sf_format) for /job/cf04976374f45beb173acf92d97b3539f961f506 with parameters array (  'module' => 'job',  'action' => 'show',  'sf_format' => 'html',  'token' => 'cf04976374f45beb173acf92d97b3539f961f506',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (cf04976374f45beb173acf92d97b3539f961f506)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_admin.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4610 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_publish" (/job/:token/publish.:sf_format) for /job/cf04976374f45beb173acf92d97b3539f961f506/publish with parameters array (  'module' => 'job',  'action' => 'publish',  'sf_format' => 'html',  'token' => 'cf04976374f45beb173acf92d97b3539f961f506',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executePublish()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (cf04976374f45beb173acf92d97b3539f961f506)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET is_activated = ?, updated_at = ? WHERE id = ? - (1, 2016-08-31 11:05:00, 3337)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/sensio-labs/atlanta-usa/3337/f001"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (119 o)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ? AND j.is_activated = ?) - (F001, 1)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {myUser} Flag old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (5127 o)
+Aug 31 11:05:00 symfony [info] {myUser} Remove old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Sensio Labs, http://www.sensio.com/, F002, Atlanta, USA, You will work with symfony to develop websites for our customers., Send me an email, for.a.job@example.com, 2016-09-30 11:05:00, a275f2ee59f333e743b20cdb488ade3c6807bdde, 2016-08-31 11:05:00, 2016-08-31 11:05:00)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/a275f2ee59f333e743b20cdb488ade3c6807bdde"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show" (/job/:token.:sf_format) for /job/a275f2ee59f333e743b20cdb488ade3c6807bdde with parameters array (  'module' => 'job',  'action' => 'show',  'sf_format' => 'html',  'token' => 'a275f2ee59f333e743b20cdb488ade3c6807bdde',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (a275f2ee59f333e743b20cdb488ade3c6807bdde)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_admin.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4610 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_delete" (/job/:token.:sf_format) for /job/a275f2ee59f333e743b20cdb488ade3c6807bdde with parameters array (  'module' => 'job',  'action' => 'delete',  'sf_format' => 'html',  'token' => 'a275f2ee59f333e743b20cdb488ade3c6807bdde',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeDelete()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (a275f2ee59f333e743b20cdb488ade3c6807bdde)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM jobeet_job WHERE id = ? - (3338)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/deleteSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (2343 o)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ?) - (F002)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Sensio Labs, http://www.sensio.com/, F003, Atlanta, USA, You will work with symfony to develop websites for our customers., Send me an email, for.a.job@example.com, 2016-09-30 11:05:00, a3fef5f076c48c85d8a97743c125b3819c23737a, 2016-08-31 11:05:00, 2016-08-31 11:05:00)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/a3fef5f076c48c85d8a97743c125b3819c23737a"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show" (/job/:token.:sf_format) for /job/a3fef5f076c48c85d8a97743c125b3819c23737a with parameters array (  'module' => 'job',  'action' => 'show',  'sf_format' => 'html',  'token' => 'a3fef5f076c48c85d8a97743c125b3819c23737a',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (a3fef5f076c48c85d8a97743c125b3819c23737a)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_admin.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4610 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_publish" (/job/:token/publish.:sf_format) for /job/a3fef5f076c48c85d8a97743c125b3819c23737a/publish with parameters array (  'module' => 'job',  'action' => 'publish',  'sf_format' => 'html',  'token' => 'a3fef5f076c48c85d8a97743c125b3819c23737a',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executePublish()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (a3fef5f076c48c85d8a97743c125b3819c23737a)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET is_activated = ? WHERE id = ? - (1, 3339)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/sensio-labs/atlanta-usa/3339/f003"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (119 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/sensio-labs/atlanta-usa/3339/f003 with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'sensio-labs',  'location_slug' => 'atlanta-usa',  'id' => '3339',  'position_slug' => 'f003',)
+Aug 31 11:05:00 symfony [info] {myUser} Flag old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (3339, 2016-08-31 11:05:00, 1)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (3045 o)
+Aug 31 11:05:00 symfony [info] {myUser} Remove old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ?) - (F003)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_edit" (/job/:token/edit.:sf_format) for /job/F003 at Sensio Labs (Atlanta, USA)/edit with parameters array (  'module' => 'job',  'action' => 'edit',  'sf_format' => 'html',  'token' => 'F003 at Sensio Labs (Atlanta, USA)',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeEdit()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (F003 at Sensio Labs (Atlanta, USA))
+Aug 31 11:05:00 symfony [err] {sfError404Exception} Unable to find the JobeetJob object with the following parameters "array (  'token' => 'F003 at Sensio Labs (Atlanta, USA)',  'sf_format' => 'html',)").
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Sensio Labs, http://www.sensio.com/, FOO4, Atlanta, USA, You will work with symfony to develop websites for our customers., Send me an email, for.a.job@example.com, 2016-09-30 11:05:00, cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f, 2016-08-31 11:05:00, 2016-08-31 11:05:00)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show" (/job/:token.:sf_format) for /job/cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f with parameters array (  'module' => 'job',  'action' => 'show',  'sf_format' => 'html',  'token' => 'cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_admin.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4610 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_publish" (/job/:token/publish.:sf_format) for /job/cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f/publish with parameters array (  'module' => 'job',  'action' => 'publish',  'sf_format' => 'html',  'token' => 'cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executePublish()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET is_activated = ? WHERE id = ? - (1, 3340)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/sensio-labs/atlanta-usa/3340/foo4"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (119 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/sensio-labs/atlanta-usa/3340/foo4 with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'sensio-labs',  'location_slug' => 'atlanta-usa',  'id' => '3340',  'position_slug' => 'foo4',)
+Aug 31 11:05:00 symfony [info] {myUser} Flag old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (3340, 2016-08-31 11:05:00, 1)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (3045 o)
+Aug 31 11:05:00 symfony [info] {myUser} Remove old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ?) - (FOO4)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_extend" (/job/:token/extend.:sf_format) for /job/cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f/extend with parameters array (  'module' => 'job',  'action' => 'extend',  'sf_format' => 'html',  'token' => 'cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeExtend()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (cb5a2f13d7d4b9e2d49bfbca78bf1cddcae4094f)
+Aug 31 11:05:00 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "job/extend".
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, url, position, location, description, how_to_apply, email, expires_at, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (0, 0, 373, full-time, Sensio Labs, http://www.sensio.com/, FOO5, Atlanta, USA, You will work with symfony to develop websites for our customers., Send me an email, for.a.job@example.com, 2016-09-30 11:05:00, bed02ccd1b8e0d61f7c57a162eda468762766850, 2016-08-31 11:05:00, 2016-08-31 11:05:00)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/bed02ccd1b8e0d61f7c57a162eda468762766850"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (126 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show" (/job/:token.:sf_format) for /job/bed02ccd1b8e0d61f7c57a162eda468762766850 with parameters array (  'module' => 'job',  'action' => 'show',  'sf_format' => 'html',  'token' => 'bed02ccd1b8e0d61f7c57a162eda468762766850',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (bed02ccd1b8e0d61f7c57a162eda468762766850)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_admin.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4610 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_publish" (/job/:token/publish.:sf_format) for /job/bed02ccd1b8e0d61f7c57a162eda468762766850/publish with parameters array (  'module' => 'job',  'action' => 'publish',  'sf_format' => 'html',  'token' => 'bed02ccd1b8e0d61f7c57a162eda468762766850',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executePublish()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.token = ?) - (bed02ccd1b8e0d61f7c57a162eda468762766850)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET is_activated = ? WHERE id = ? - (1, 3341)
+Aug 31 11:05:00 symfony [info] {sfFrontWebController} Redirect to "/index.php/job/sensio-labs/atlanta-usa/3341/foo5"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (119 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/sensio-labs/atlanta-usa/3341/foo5 with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'sensio-labs',  'location_slug' => 'atlanta-usa',  'id' => '3341',  'position_slug' => 'foo5',)
+Aug 31 11:05:00 symfony [info] {myUser} Flag old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id = ? AND j.expires_at > ? AND j.is_activated = ?) ORDER BY j.expires_at DESC - (3341, 2016-08-31 11:05:00, 1)
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Aug 31 11:05:00 symfony [info] {main} Set slot "title"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (3045 o)
+Aug 31 11:05:00 symfony [info] {myUser} Remove old flash messages ("notice")
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.position = ?) - (FOO5)
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_job SET expires_at = ? WHERE id = ? - (2016-08-31, 3341)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_new" (/job/new.:sf_format) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (4994 o)
+Aug 31 11:05:00 symfony [info] {sfPatternRouting} Match route "job_create" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'create',  'sf_format' => 'html',)
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Aug 31 11:05:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 31 11:05:00 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_category j WHERE j.id = ? - (373)
+Aug 31 11:05:00 symfony [info] {jobActions} Change template to "CURRENT/new"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Aug 31 11:05:00 symfony [info] {sfPartialView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/modules/job/templates/_form.php"
+Aug 31 11:05:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Aug 31 11:05:00 symfony [info] {sfPHPView} Decorate content with "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {sfPHPView} Render "/home/marcelo/www/test-henry/jobeet/apps/frontend/templates/layout.php"
+Aug 31 11:05:00 symfony [info] {main} Get slot "title"
+Aug 31 11:05:00 symfony [info] {sfWebResponse} Send content (5532 o)

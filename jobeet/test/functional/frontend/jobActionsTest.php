@@ -231,3 +231,20 @@ $browser->test()
   		$job->getDateTimeObject('expires_at')->format('y/m/d'),
   		date('y/m/d', time() + 86400 * sfConfig::get('app_active_days'))
 	);*/
+
+//	Simulacion de cambio de columna prohibida
+$browser->
+	get('/job/new')
+	->click(
+		'Preview your job',
+		array(
+			'job' => array(
+				'token' => 'fake_token'
+			)
+		)
+	)
+	->with('form')
+		->begin()
+		->hasErrors(7)
+			->hasGlobalError('extra_fields')
+	->end();
