@@ -4,7 +4,7 @@
 # pasando a true la variable is_secure pide autenticacion para ingresar al backend
 
 default:
-  is_secure:    false
+  is_secure:    true
   #creadentials: admin
 
 # podemos especificar la seguridad para cada uno de los modulos o los action
